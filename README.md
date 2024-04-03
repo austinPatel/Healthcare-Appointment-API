@@ -2,7 +2,13 @@
 
 ## Clone the Project into your local machine
 Repository=https://github.com/austinPatel/Healthcare-Appointment-API.git
+
 Change the current working directory to the location where you want the cloned directory.
+## git clone https://github.com/austinPatel/Healthcare-Appointment-API.git
+Change the directory to "Healthcare-Appointment-API" => cd Healthcare-Appointment-API
+## git branch
+## git checkout master
+
 
 ## install composer which resolves the dependencies, and installs them into vendor all laravel packages.
 
