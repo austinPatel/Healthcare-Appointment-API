@@ -123,3 +123,8 @@ Which will install MYSQL PHPMYADMIN APACHE SERVER
 MYSQL_ROOT_PASSWORD: root
 MYSQL_DATABASE: healthcare
 
+# To setup the application below command need to be execute
+# docker-compose build
+# 
+
+
