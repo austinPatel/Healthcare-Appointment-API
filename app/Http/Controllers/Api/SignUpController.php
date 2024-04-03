@@ -25,11 +25,11 @@ class SignUpController extends ApiController
         try {
             $user = $this->userRepository->requestUser($request->all());
             $token = $user->createToken('token')->accessToken;
-            $success = [
+            $response = [
                 'token' => $token,
                 'user' => $user
             ];
-            return $this->sendResponse($success, 'User Successfully register');
+            return $this->sendResponse($response, 'User Successfully register');
         } catch (Exception $exception) {
             return $this->sendError($exception->getMessage());
         }

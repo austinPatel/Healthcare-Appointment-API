@@ -23,8 +23,8 @@ class HealthcareProfessionalController extends ApiController
     public function index(Request $request){
         try
         {
-            $healthcareProfessionals= $this->healthcareProfessionalRepo->getHealthcareProfessional($request);
-            return $this->sendResponse($healthcareProfessionals, 'Healthcare Professionals');
+            $response= $this->healthcareProfessionalRepo->getHealthcareProfessional($request);
+            return $this->sendResponse($response, 'Healthcare Professionals');
         }catch (ValidationException $error) {
             return $this->sendError($error->getMessage(), $error, 500);
         }

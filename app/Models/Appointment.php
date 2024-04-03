@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use App\Models\User;
+use App\Models\HealthcareProfessional;
 
 class Appointment extends Model
 {
@@ -31,6 +32,10 @@ class Appointment extends Model
     public function userAppointment(): BelongsTo
     {
         return $this->belongsTo(User::class);
+    }
+    public function healthcareProfessionals()
+    {
+        return $this->belongsTo(HealthcareProfessional::class);
     }
 
 }

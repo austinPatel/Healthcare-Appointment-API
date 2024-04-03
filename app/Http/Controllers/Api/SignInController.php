@@ -49,9 +49,9 @@ class SignInController extends ApiController
             if (!Hash::check($request->password, $user->password, [])) {
                 throw new \Exception('Error in Login');
             }
-            $success['token'] = $user->createToken('authToken')->accessToken;
-            $success['user_detail'] = ($user);
-            return $this->sendResponse($success, 'Successfully Login');
+            $response['token'] = $user->createToken('authToken')->accessToken;
+            $response['user_detail'] = ($user);
+            return $this->sendResponse($response, 'Successfully Login');
         }catch (ValidationException $error) {
             return $this->sendError($error->getMessage(), $error, 500);
         }
