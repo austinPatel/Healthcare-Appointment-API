@@ -58,8 +58,8 @@ or
 
 ## API Endpoints
 
-# User Singup = /api/user/sign-up - Post method
-#Request Body 
+## User Singup = /api/user/sign-up - Post method
+Request Body 
 {
   "name": "Hardik Patel",
   "email": "hardik@localhost.com",
@@ -67,7 +67,7 @@ or
   "confirm_password": "password"
 }
 
-# User Signin = /api/user/sign-in
+## User Signin = /api/user/sign-in
 
 #Request Body 
 {
@@ -75,16 +75,16 @@ or
   "password": "password"
 }
 
-# Below api is required the access token for accessing the all other api endpoint
+## Below api is required the access token for accessing the all other api endpoint
 
 Authorization: Bearer {token}
 
-# get all Healthcare Professional = /api/get-healthcare-professional
+## get all Healthcare Professional = /api/get-healthcare-professional
 Optional Query Parameters used for the filter
 name - filter by name
 specialty- filter by specialty
 
-# ser booking appointment = /api/user/appointment/booked -Post method
+## ser booking appointment = /api/user/appointment/booked -Post method
 Status = (booked=1, completed=2, cancelled=3)
 Request Body
 {
@@ -93,22 +93,22 @@ Request Body
     "appointment_end_time": "2023-04-03 09:30:00",
     "status": "1"
 }
-# get all user appointment = /api/user/appointment
+## get all user appointment = /api/user/appointment
 
-# Cancelled appointment - /api/user/appointment/cancelled - Patch method
+## Cancelled appointment - /api/user/appointment/cancelled - Patch method
 passed the appointment_id
 Request Body
 {
     "appointment_id": 2
 }
 
-# we can also made the appointment resources e.g /appointment -
+## we can also made the appointment resources e.g /appointment -
 /GET(All appointment)
 /POST(Booked)
 /Patch(cancelled)
 /PUT(completed)
 
-# Dockerization
+## Dockerization
 Create the Dockerfile - which consist of install PHP/APACHE/MYSQL
 -install all the dependencies and enable PHP modules
 -enable apache modules
@@ -118,13 +118,13 @@ Create the Dockerfile - which consist of install PHP/APACHE/MYSQL
 -Install Composer or COPY Composer
 -Set permission to cache and bootstrap folder
 
-# Provided a Dockerfile and docker-compose.yml to set up the entire application.
+## Provided a Dockerfile and docker-compose.yml to set up the entire application.
 Which will install MYSQL PHPMYADMIN APACHE SERVER
 MYSQL_ROOT_PASSWORD: root
 MYSQL_DATABASE: healthcare
 
-# To setup the application below command need to be execute
-# docker-compose build
-# 
+## To setup the application below command need to be execute
+## docker-compose build
+## docker-compose up
 
 
